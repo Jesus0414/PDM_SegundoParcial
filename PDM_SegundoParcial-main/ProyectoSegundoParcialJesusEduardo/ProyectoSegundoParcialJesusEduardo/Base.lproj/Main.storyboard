@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TN4-5x-gCj">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="cPy-kt-BLP">
+            <objects>
+                <navigationController id="TN4-5x-gCj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3in-3V-WzY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ORa-E1-1j3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ALy-DC-Taj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-843" y="139"/>
+        </scene>
+        <!--Lista Regiones Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ListaRegionesController" customModule="ProyectoSegundoParcialJesusEduardo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H6b-T0-X2T">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaRegion" id="R12-M3-zPN" customClass="CeldaRegionController" customModule="ProyectoSegundoParcialJesusEduardo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R12-M3-zPN" id="y4S-zB-Awm">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de la Región" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0h-bh-Pj4">
+                                                    <rect key="frame" x="20" y="11.5" width="160" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="r0h-bh-Pj4" firstAttribute="centerY" secondItem="y4S-zB-Awm" secondAttribute="centerY" id="SeI-Vp-HMf"/>
+                                                <constraint firstItem="r0h-bh-Pj4" firstAttribute="leading" secondItem="y4S-zB-Awm" secondAttribute="leadingMargin" id="Ypb-8i-UWG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblNombre" destination="r0h-bh-Pj4" id="M6m-wS-Gyn"/>
+                                            <segue destination="XRZ-dR-Vjb" kind="show" id="1yi-kn-M5K"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Q49-gj-O4U"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SnQ-tl-c49"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="H6b-T0-X2T" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QaB-cS-wbi"/>
+                            <constraint firstItem="H6b-T0-X2T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="huz-ob-khk"/>
+                            <constraint firstItem="H6b-T0-X2T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tI6-wQ-DDq"/>
+                            <constraint firstItem="H6b-T0-X2T" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uGn-AL-tjW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8mQ-7u-psF"/>
+                    <connections>
+                        <outlet property="tvRegiones" destination="H6b-T0-X2T" id="2l6-6q-EI3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+        <!--Detalles Region Controller-->
+        <scene sceneID="WB1-RI-bMu">
+            <objects>
+                <viewController id="XRZ-dR-Vjb" customClass="DetallesRegionController" customModule="ProyectoSegundoParcialJesusEduardo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1ua-6z-QsK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número de pokemones de la región" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8n-WG-icF">
+                                <rect key="frame" x="20" y="119" width="272" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripción de la región" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4C7-st-f22">
+                                <rect key="frame" x="20" y="174" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="g8n-WG-icF" firstAttribute="leading" secondItem="yZw-AK-RZc" secondAttribute="leading" constant="20" id="0Bf-Bq-0A7"/>
+                            <constraint firstItem="g8n-WG-icF" firstAttribute="top" secondItem="yZw-AK-RZc" secondAttribute="top" constant="31" id="2ET-1g-8gn"/>
+                            <constraint firstItem="yZw-AK-RZc" firstAttribute="trailing" secondItem="4C7-st-f22" secondAttribute="trailing" constant="20" id="Mx8-6o-xgG"/>
+                            <constraint firstItem="4C7-st-f22" firstAttribute="leading" secondItem="yZw-AK-RZc" secondAttribute="leading" constant="20" id="OJR-6f-s5k"/>
+                            <constraint firstItem="4C7-st-f22" firstAttribute="top" secondItem="g8n-WG-icF" secondAttribute="bottom" constant="34" id="VHz-Oi-FCc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yZw-AK-RZc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="42d-He-jaq"/>
+                    <connections>
+                        <outlet property="lblDescripcion" destination="4C7-st-f22" id="xTq-w0-3HH"/>
+                        <outlet property="lblNoPokemones" destination="g8n-WG-icF" id="N5j-RH-SKp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgt-t7-xMP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942.02898550724649" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
