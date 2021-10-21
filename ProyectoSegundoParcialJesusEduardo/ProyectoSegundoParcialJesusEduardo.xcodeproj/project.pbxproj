@@ -14,6 +14,8 @@
 		3D7C72392714FDC7000AABF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D7C72382714FDC7000AABF6 /* Assets.xcassets */; };
 		3D7C723C2714FDC7000AABF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7C723A2714FDC7000AABF6 /* LaunchScreen.storyboard */; };
 		3D7C72442715046F000AABF6 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C72432715046F000AABF6 /* Region.swift */; };
+		3D9DF9442717A03000930F56 /* CeldaRegionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9DF9432717A03000930F56 /* CeldaRegionController.swift */; };
+		3D9DF9462717A63D00930F56 /* DetallesRegionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9DF9452717A63D00930F56 /* DetallesRegionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		3D7C723B2714FDC7000AABF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D7C723D2714FDC7000AABF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D7C72432715046F000AABF6 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		3D9DF9432717A03000930F56 /* CeldaRegionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaRegionController.swift; sourceTree = "<group>"; };
+		3D9DF9452717A63D00930F56 /* DetallesRegionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallesRegionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				3D7C723A2714FDC7000AABF6 /* LaunchScreen.storyboard */,
 				3D7C723D2714FDC7000AABF6 /* Info.plist */,
 				3D7C72432715046F000AABF6 /* Region.swift */,
+				3D9DF9432717A03000930F56 /* CeldaRegionController.swift */,
+				3D9DF9452717A63D00930F56 /* DetallesRegionController.swift */,
 			);
 			path = ProyectoSegundoParcialJesusEduardo;
 			sourceTree = "<group>";
@@ -142,7 +148,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D7C72342714FDC4000AABF6 /* ListaRegionesController.swift in Sources */,
+				3D9DF9442717A03000930F56 /* CeldaRegionController.swift in Sources */,
 				3D7C72302714FDC4000AABF6 /* AppDelegate.swift in Sources */,
+				3D9DF9462717A63D00930F56 /* DetallesRegionController.swift in Sources */,
 				3D7C72322714FDC4000AABF6 /* SceneDelegate.swift in Sources */,
 				3D7C72442715046F000AABF6 /* Region.swift in Sources */,
 			);

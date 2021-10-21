@@ -19,13 +19,18 @@ class ListaRegionesController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celda = tableView.dequeueReusableCell(withIdentifier: "celdaRegion")!
+        let celda = tableView.dequeueReusableCell(withIdentifier: "celdaRegion") as! CeldaRegionController
+        celda.lblNombre.text = regiones[indexPath.row].nombre
+        
         
         return celda
     }
     
 
     var regiones : [Region] = []
+    
+    
+    @IBOutlet weak var tvRegiones: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +48,11 @@ class ListaRegionesController: UIViewController, UITableViewDelegate, UITableVie
         regiones.append(Region(nombre: "Galar", descripcion: "es una región del mundo Pokémon donde se desarrollará la trama de los videojuegos Pokémon Espada y Pokémon Escudo de la octava generación. Los Pokémon iniciales a escoger son Grookey, Scorbunny y Sobble. Fue presentada en el Nintendo Direct especial de Pokémon emitido el 27 de febrero del 2019.", numPokemones: "Números de pokemones incluidos: 89"))
     }
 
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destino = segue.destination as! DetallesRegionController
+        destino.region = regiones[tvRegiones.indexPathForSelectedRow!.row]
+    }
+    
 }
 
